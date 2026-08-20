@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daybook — Support</title>
+<style>
+    :root {
+      color-scheme: light dark;
+      --ink: #1d1d1f; --muted: #86868b; --bg: #fff; --card: #f5f5f7;
+      --rule: #d2d2d7; --navy: #1c1c28; --brand: #0c7c87;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --ink: #f5f5f7; --muted: #98989d; --bg: #161617; --card: #202022;
+        --rule: #333; --brand: #1ec1cb;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0 auto; padding: 40px 22px 80px; max-width: 860px;
+      font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--ink); background: var(--bg);
+    }
+    h1 { font-size: 2.4rem; letter-spacing: -0.03em; margin: 0 0 6px; }
+    h2 { font-size: 1.3rem; margin: 2.6rem 0 0.6rem; letter-spacing: -0.01em; }
+    h3 { font-size: 1rem; margin: 1.6rem 0 0.3rem; }
+    a { color: var(--brand); }
+    .updated, .lede { color: var(--muted); }
+    .lede { font-size: 1.15rem; margin: 0 0 2rem; }
+    .nav { margin-bottom: 2.4rem; font-size: 0.9rem; color: var(--muted); }
+    .nav a { text-decoration: none; }
+    .mark { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+    .mark img { width: 64px; height: 64px; border-radius: 14px; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; display: block; overflow-x: auto; }
+    td, th { border: 1px solid var(--rule); padding: 8px 12px; text-align: left; }
+    th { background: var(--card); }
+    code { background: var(--card); padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+    .shots { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 18px; margin: 1.4rem 0; }
+    .shot img { width: 100%; border-radius: 14px; border: 1px solid var(--rule); display: block; }
+    .shot p { font-size: 0.82rem; color: var(--muted); margin: 8px 2px 0; }
+    .pages { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; margin: 1.4rem 0; }
+    .pages img { width: 100%; border: 1px solid var(--rule); border-radius: 8px; display: block; }
+    .callout { background: var(--card); border-radius: 14px; padding: 16px 20px; margin: 1.4rem 0; }
+    .callout p:first-child { margin-top: 0; }
+    .callout p:last-child { margin-bottom: 0; }
+    footer { margin-top: 3.5rem; padding-top: 1.2rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<div class="nav"><a href="../index.html">Daybook</a> &middot; <a href="../privacy.html">Privacy</a> &middot; <a href="../support.html">Support</a></div>
+
+<h1>Daybook Support</h1>
+<p class="lede">A field record for people whose work has to be proved after the fact.</p>
+
+<p><strong>Get help:</strong> <a href="https://github.com/asadbl/daybook-site/issues">open an issue</a>.
+Include your iOS version and what you were doing when it went wrong.</p>
+
+<h2>Getting started</h2>
+<h3>Make a job</h3>
+<p>Projects &rarr; <strong>+</strong>. A name is the only thing required; client, reference,
+address and dates can be filled in whenever you have them.</p>
+
+<h3>Photograph it</h3>
+<p>Camera &rarr; shutter. The chip at the top says which job the photo lands in — tap it to
+switch without leaving the camera. If you shoot before making a job, the photos wait in
+<strong>Unsorted</strong> and you file them later.</p>
+
+<h3>Mark before, during and after</h3>
+<p>Select photos in the grid and set the phase. Phases print as labels on the report and are
+searchable.</p>
+
+<h2>Notes</h2>
+<p>There are two kinds, deliberately kept apart:</p>
+<ul>
+<li><strong>Notes on a job</strong> — the running log. Written from the project screen. Pin one
+and it stays at the top.</li>
+<li><strong>Notes on a photograph</strong> — what the inspector objected to, what the client
+approved, why you reshot it. Written from the photo screen, or its Actions menu. Each one records
+who wrote it and when, and the newest prints under that photo in the report.</li>
+</ul>
+<p>A note on a photograph stays on that photograph — it does not clutter the job's log. Deleting
+a photo does not delete what people wrote about it.</p>
+
+<h2>Reports</h2>
+<p>Open a job &rarr; <strong>Export</strong>. Two formats:</p>
+<ul>
+<li><strong>PDF report</strong> — cover, photographs numbered and grouped by day, optional map,
+chain-of-custody appendix and signature page. <a href="../Daybook-sample-report.pdf">See a sample</a>.</li>
+<li><strong>ZIP</strong> — every original with a CSV manifest of hashes and locations, plus a
+README explaining how to verify them. Readable without this app.</li>
+</ul>
+<p>On the free plan the PDF carries a small Daybook mark in the corner. Nothing else about it
+differs, and the ZIP is never marked.</p>
+
+<h2>Proving a photo has not been altered</h2>
+<p>Open a photo and tap <strong>Verify Integrity</strong>. Daybook re-hashes the file on disk and
+compares it with the fingerprint recorded at capture. The same fingerprints are listed in the
+report's chain-of-custody appendix, so a reader can check them independently.</p>
+
+<h2>Languages</h2>
+<p>English, Hebrew, Arabic, Russian and Spanish, in Settings &rarr; Language. Hebrew and Arabic
+turn the whole layout right to left. A few labels finish switching after you reopen the app.</p>
+
+<h2>Subscription</h2>
+<p>Daybook Pro is an auto-renewing subscription that lifts the free plan's limits and removes the
+mark from reports. Manage or cancel in Settings &rarr; Apple Account &rarr; Subscriptions, or in
+the app at Settings &rarr; Subscription &rarr; Restore Purchases if you have changed device.</p>
+<p>Reading and exporting are never blocked, on any plan, including after a subscription ends.</p>
+
+<h2>Common questions</h2>
+<h3>The camera shows "SAMPLE" images</h3>
+<p>You are running in the iOS Simulator, which has no camera. Daybook substitutes obvious
+placeholder frames so the rest of the app can be used. On a real iPhone you get the real camera.</p>
+
+<h3>The map page is missing from my report</h3>
+<p>Map tiles need a network connection at the moment the report is built, and only photographs
+that recorded a location appear on it. The report says how many were left off.</p>
+
+<h3>Does Daybook work offline?</h3>
+<p>Yes. Capture, notes, search and reports all work with no connection. Only the map page and the
+trusted-clock check need the network, and both degrade quietly.</p>
+
+<footer>Daybook for iPhone &middot; &copy; 2026 Asad</footer>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daybook — Proof of the work you did</title>
+<meta name="description" content="A field record for people whose work has to be proved after the fact. Photograph the job; Daybook records when, where and who, and turns it into a report a client or adjuster will accept.">
+<style>
+    :root {
+      color-scheme: light dark;
+      --ink: #1d1d1f; --muted: #86868b; --bg: #fff; --card: #f5f5f7;
+      --rule: #d2d2d7; --navy: #1c1c28; --brand: #0c7c87;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --ink: #f5f5f7; --muted: #98989d; --bg: #161617; --card: #202022;
+        --rule: #333; --brand: #1ec1cb;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0 auto; padding: 40px 22px 80px; max-width: 860px;
+      font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--ink); background: var(--bg);
+    }
+    h1 { font-size: 2.4rem; letter-spacing: -0.03em; margin: 0 0 6px; }
+    h2 { font-size: 1.3rem; margin: 2.6rem 0 0.6rem; letter-spacing: -0.01em; }
+    h3 { font-size: 1rem; margin: 1.6rem 0 0.3rem; }
+    a { color: var(--brand); }
+    .updated, .lede { color: var(--muted); }
+    .lede { font-size: 1.15rem; margin: 0 0 2rem; }
+    .nav { margin-bottom: 2.4rem; font-size: 0.9rem; color: var(--muted); }
+    .nav a { text-decoration: none; }
+    .mark { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+    .mark img { width: 64px; height: 64px; border-radius: 14px; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; display: block; overflow-x: auto; }
+    td, th { border: 1px solid var(--rule); padding: 8px 12px; text-align: left; }
+    th { background: var(--card); }
+    code { background: var(--card); padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+    .shots { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 18px; margin: 1.4rem 0; }
+    .shot img { width: 100%; border-radius: 14px; border: 1px solid var(--rule); display: block; }
+    .shot p { font-size: 0.82rem; color: var(--muted); margin: 8px 2px 0; }
+    .pages { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; margin: 1.4rem 0; }
+    .pages img { width: 100%; border: 1px solid var(--rule); border-radius: 8px; display: block; }
+    .callout { background: var(--card); border-radius: 14px; padding: 16px 20px; margin: 1.4rem 0; }
+    .callout p:first-child { margin-top: 0; }
+    .callout p:last-child { margin-bottom: 0; }
+    footer { margin-top: 3.5rem; padding-top: 1.2rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<div class="nav"><a href="./index.html">Daybook</a> &middot; <a href="./privacy.html">Privacy</a> &middot; <a href="./support.html">Support</a></div>
+
+<div class="mark"><img src="./img/icon.png" alt="Daybook app icon"><h1>Daybook</h1></div>
+<p class="lede">Proof of the work you did.</p>
+
+<p>Daybook is a field record for people whose work has to be proved after the fact —
+contractors, property managers, inspectors, dentists, photographers.</p>
+
+<p>Photograph what you did. Daybook attaches the time, the place, who took the shot and a
+fingerprint of the file itself, and keeps the original untouched. When the job is questioned six
+months later, you have a record instead of a memory.</p>
+
+<h2>The app</h2>
+<div class="shots">
+  <div class="shot"><img src="./img/01-home-dashboard.png" alt="Home dashboard showing project counts and photos captured"><p>Every job at a glance</p></div>
+  <div class="shot"><img src="./img/04-projects.png" alt="Projects list with status filters"><p>Jobs, filtered by state</p></div>
+  <div class="shot"><img src="./img/02-project-with-photos.png" alt="A project's photos grouped by day"><p>Photos grouped by day</p></div>
+  <div class="shot"><img src="./img/03-photo-with-note.png" alt="Photo detail showing the evidence record and a note with its author and time"><p>The record for one frame — and notes on it, signed and timed</p></div>
+  <div class="shot"><img src="./img/06-project-notes.png" alt="Notes on a project, with a pinned note at the top"><p>Notes about the job</p></div>
+  <div class="shot"><img src="./img/07-camera.png" alt="Camera aimed at a project"><p>Shoot straight into a job</p></div>
+  <div class="shot"><img src="./img/08-search.png" alt="Search across jobs, clients and text inside photos"><p>Search, including text inside photos</p></div>
+  <div class="shot"><img src="./img/05-export-options.png" alt="Export options for the PDF report"><p>Build the report</p></div>
+  <div class="shot"><img src="./img/09-settings.png" alt="Settings: language, business, crew, iCloud, widget, subscription"><p>Five languages, your business details</p></div>
+  <div class="shot"><img src="./img/10-subscription.png" alt="Daybook Pro subscription screen"><p>Daybook Pro</p></div>
+</div>
+
+<h2>A report somebody will accept</h2>
+<p>Export a PDF with a cover, your company name, the photographs laid out and numbered, a map of
+where each was taken, a chain-of-custody appendix listing every fingerprint, and a signature
+page. Or export a ZIP of every original with a manifest, readable without this app.</p>
+
+<div class="pages">
+  <img src="./img/report-cover.png" alt="Sample report cover page">
+  <img src="./img/report-plates.png" alt="Sample report photo pages with numbered plates and captions">
+</div>
+<p><a href="./Daybook-sample-report.pdf">Read the full sample report (PDF)</a></p>
+
+<h2>Evidence, not just pictures</h2>
+<ul>
+<li>The capture time is checked against a trusted clock, and the report says so.</li>
+<li>Every file carries a SHA-256 fingerprint you can re-verify at any time.</li>
+<li>Originals are never altered — stamps are burned into a copy.</li>
+<li>Daybook reads serial plates, model numbers and permit stickers, and gives you the text to
+copy, not just an index entry.</li>
+</ul>
+
+<h2>Your work stays yours</h2>
+<div class="callout">
+<p>There is no account and no server of ours. Everything lives on your device and, if you turn it
+on, in your own private iCloud.</p>
+<p>Everything you capture stays readable and exportable on any plan, including after a
+subscription ends. We will never hold your evidence hostage.</p>
+</div>
+
+<h2>Links</h2>
+<ul>
+<li><a href="./support.html">Support</a></li>
+<li><a href="./privacy.html">Privacy policy</a></li>
+</ul>
+
+<footer>Daybook for iPhone &middot; &copy; 2026 Asad</footer>
+</body>
+</html>
