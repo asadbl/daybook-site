@@ -1,0 +1,37 @@
+# Publishes the site.
+#
+# Only used when Settings → Pages → Source is "GitHub Actions". With the older
+# "Deploy from a branch" setting this workflow is redundant and its deploy step
+# will fail — that failure is the signal to delete this file, not to debug it.
+name: Deploy to Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One deploy at a time; never cancel one in flight, so a half-published site
+# cannot be left serving.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # The whole repository is the site — plain HTML, no build step.
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v4
